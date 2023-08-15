@@ -11,6 +11,10 @@ describe("toBe", () => {
   test.fails("functions should to be strictly equal", () => {
     expect(() => {}).toBe(() => {});
   });
+  test("functions should to be strictly equal if compared by reference", () => {
+    const fn = () => {};
+    expect(fn).toBe(fn);
+  });
 });
 
 describe("toEqual", () => {
