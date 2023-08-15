@@ -1,2 +1,1 @@
-# ref-mocking
-JavaScript Unit Testing
+# JavaScript Unit Testing
