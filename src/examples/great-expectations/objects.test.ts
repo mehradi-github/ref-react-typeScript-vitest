@@ -12,3 +12,9 @@ describe("toBe", () => {
     expect(() => {}).toBe(() => {});
   });
 });
+
+describe("toEqual", () => {
+  test("similar objects should pass with #toEqual", () => {
+    expect({ a: 1 }).toEqual({ a: 1 });
+  });
+});
