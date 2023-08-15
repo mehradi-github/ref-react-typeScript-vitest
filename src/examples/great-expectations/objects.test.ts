@@ -20,4 +20,7 @@ describe("toEqual", () => {
   test("similar nested objects should pass with #toEqual", () => {
     expect({ a: 1, b: { c: 2 } }).toEqual({ a: 1, b: { c: 2 } });
   });
+  test('similar arrays should pass with #toEqual', () => {
+    expect([1, 2, 3]).toEqual([1, 2, 3]);
+  });
 });
