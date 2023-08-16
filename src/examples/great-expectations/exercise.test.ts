@@ -14,13 +14,13 @@ describe("Kanban Board", () => {
 
   it("should remove a status using #removeStatus", async () => {
     const board = new KanbanBoard("Things to Do");
-    expect(board.statuses).toContain("Backlog");
-    // Use board.removeStatus to remove a status.
-    await board.removeStatus("Backlog");
-    // You can be clever or you can just assume "Backlog" is in board.statuses
-    // by default.
-    expect(board.statuses).not.toContain("Backlog");
+    const status = "Backlog";
+    expect(board.statuses).toContain(status);
 
-    // Verify that the status is no longer in in board.statuses.
+    const returnValue = await board.removeStatus(status);
+
+    expect(board.statuses).not.toContain(status);
+
+    expect(returnValue).toBe(4);
   });
 });
