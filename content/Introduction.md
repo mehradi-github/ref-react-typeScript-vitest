@@ -1,26 +1,5 @@
 # Introduction
 
-## What is This All About?
-
-Getting started is easy. But, over time, our code bases tend to grow unwieldy. Things that _should_ be easy all of a sudden _aren't_ anymore because we're not sure what will break if we make what would otherwise be a relatively simple change. In this course, we're going to look at strategies getting that complexity under control.
-
-This can happen for a number of reasons:
-
-- Maybe you've inherited an older codebase,
-- one that's been through some changes in product direction,
-- one that you're looking to migrate from an older framework,
-- or a brand new one that you'd like to get started on the right foot…
-
-This course will show you how to put together an infrastructure that will give you confidence when making changes—big or small.
-
-## Oh Wait — Who Even Am I?
-
-Alright, let's get this part out of the way:
-
-Hi! I'm [Steve](https://stevekinney.net) and I am the Head of Engineering, Frontend and Developer Tools, at [Temporal](https://temporal.io). Previously, I was the frontend architect at [Twilio](https://twillio.com) and [SendGrid](https://sendgrid.com) (and Temporal, actually).
-
-### Three Ingredients
-
 When I think about managing a large code base, I tend to think about it from three different perspectives:
 
 - Patterns (architecture)

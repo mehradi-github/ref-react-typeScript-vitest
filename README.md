@@ -15,6 +15,7 @@
   - [Mocking and Spying](#mocking-and-spying)
   - [Integration Testing with Playwright](#integration-testing-with-playwright)
   - [Enforcing Standards](#enforcing-standards)
+  - [Sources](#sources)
 
 ## Introduction
 
@@ -128,3 +129,7 @@ Testing functions is all well and good, but what about mounting entire component
 - Exercise: Set Up a Job for Checking Lint and Prettier Rules
 - [Husky, Lint-Staged, and Git Hooks](content/Husky,%20Lint-Staged,%20and%20Git%20Hooks.md)
 - [Creating a Reusable Github Action](content/Creating%20a%20Reusable%20Github%20Action.md)
+
+## Sources
+
+The examples used into project fork from the project [`Enterprise UI Development`](https://github.com/stevekinney/enterprise-ui-dev).
