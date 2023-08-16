@@ -28,10 +28,11 @@ describe('createPerson', () => {
 });
 
 describe('Kanban Board', () => {
-  it.todo('should include "Backlog" in board.statuses', () => {
+  it('should include "Backlog" in board.statuses', () => {
     const board = new KanbanBoard('Things to Do');
     expect.hasAssertions();
     // Verify that board.statuses contains "Backlog".
+    expect(board.statuses).toContain('Backlog');
   });
 
   it.todo('should *not* include "Bogus" in board.statuses', () => {
@@ -50,15 +51,16 @@ describe('Kanban Board', () => {
     },
   );
 
-  it.todo('should remove a status using #removeStatus', () => {
+  it('should remove a status using #removeStatus', async () => {
     const board = new KanbanBoard('Things to Do');
-    expect.hasAssertions();
-    // Use board.removeStatus to remove a status.
+    const status = 'Backlog';
+    expect(board.statuses).toContain(status);
 
-    // You can be clever or you can just assume "Backlog" is in board.statuses
-    // by default.
+    const returnValue = await board.removeStatus(status);
 
-    // Verify that the status is no longer in in board.statuses.
+    expect(board.statuses).not.toContain(status);
+
+    expect(returnValue).toBe(4);
   });
 });
 
