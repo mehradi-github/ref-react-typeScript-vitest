@@ -6,14 +6,14 @@ type PersonOptions = {
 };
 
 const parseFullName = (fullName: string): PersonOptions => {
-  if (!fullName.length) throw new Error("fullName cannot be an empty string.");
+  if (!fullName.length) throw new Error('fullName cannot be an empty string.');
 
-  const [firstName, ...rest] = fullName.split(" ");
+  const [firstName, ...rest] = fullName.split(' ');
   const lastName = rest.pop();
   let middleName: string | undefined;
 
   if (rest.length) {
-    middleName = rest.join(" ");
+    middleName = rest.join(' ');
   }
 
   return { firstName, middleName, lastName };
@@ -43,7 +43,7 @@ export class Person {
   friends: Set<Person> = new Set();
 
   constructor(args: PersonOptions | string) {
-    if (typeof args === "string") {
+    if (typeof args === 'string') {
       args = parseFullName(args);
     }
 

@@ -1,6 +1,6 @@
-import { toKebabCase } from "./to-kebab-case";
+import { toKebabCase } from './to-kebab-case';
 
-export const defaultStatuses = ["Backlog", "Ready", "In Progress", "Completed"];
+export const defaultStatuses = ['Backlog', 'Ready', 'In Progress', 'Completed'];
 
 export class KanbanBoard {
   title: string;
@@ -17,8 +17,7 @@ export class KanbanBoard {
     this.statuses.push(status);
   }
 
-  async removeStatus(status: string) {
+  removeStatus(status: string) {
     this.statuses.splice(this.statuses.indexOf(status));
-    return 4;
   }
 }
