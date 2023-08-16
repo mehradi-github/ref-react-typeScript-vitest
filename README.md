@@ -1,26 +1,36 @@
-![](assets/enterprise-user-interface-development.png)
+# React + TypeScript + Vite
 
-# Frontend Masters Course
+- [React + TypeScript + Vite](#react--typescript--vite)
+  - [Introduction](#introduction)
+  - [Unit Testing](#unit-testing)
+    - [Testing Philosophy](#testing-philosophy)
+    - [Getting Warmed Up: The Basics of Unit Testing](#getting-warmed-up-the-basics-of-unit-testing)
+    - [Great Expectations](#great-expectations)
+    - [Parallelizing, Parameterizing, and Reporting](#parallelizing-parameterizing-and-reporting)
+  - [Building a CI Pipeline with Github Actions](#building-a-ci-pipeline-with-github-actions)
+  - [Component Testing](#component-testing)
+    - [Testing for Accessibility](#testing-for-accessibility)
+    - [Testing for Code Coverage](#testing-for-code-coverage)
+  - [Storing Artifacts Using Github Actions](#storing-artifacts-using-github-actions)
+  - [Mocking and Spying](#mocking-and-spying)
+  - [Integration Testing with Playwright](#integration-testing-with-playwright)
+  - [Enforcing Standards](#enforcing-standards)
 
-This repository is a companion website to the [Frontend Masters](https://frontendmasters.com) course [Enterprise UI Development](https://frontendmasters.com/courses/enterprise-ui-dev).
-
-# Introduction
-
-What is this course all about? What do you need? What technologies are we going to be using? What do I need to have installed?
+## Introduction
 
 - [Introduction](content/Introduction.md)
 - [Components of Large Application](content/Components%20of%20Large%20Application.md)
 
-# Unit Testing
+## Unit Testing
 
-## Testing Philosophy
+### Testing Philosophy
 
 When it comes to testing, a lot of the terminology is murky and things don't always mean what they originally mean. Let's settle on a common vocabulary. We'll also talk about some of the trade-offs between different kinds of tests.
 
 - [Unit, Integration, and End-to-End Testing](content/Unit,%20Integration,%20and%20End-to-End%20Testing.md)
 - [Test Runners and Assertion Libraries](content/Test%20Runners%20and%20Assertion%20Libraries.md)
 
-## Getting Warmed Up: The Basics of Unit Testing
+### Getting Warmed Up: The Basics of Unit Testing
 
 Okay, we're not going to dwell _too much_ on the basics of unit testing, but let's at least do a quick review of the basics to get ourselves warmed up and make sure we're on the same page. If you're a little rusty, then this section will get you up to speed. That said, I suspect that even the seasoned unit testing wunderkind, I suspect you'll still pick up a trick or two.
 
@@ -30,7 +40,7 @@ Okay, we're not going to dwell _too much_ on the basics of unit testing, but let
 - [Test Suites and Annotations](content/Test%20Suites%20and%20Annotations.md)
 - [Testing Asynchronous Code](content/Testing%20Asynchronous%20Code.md)
 
-## Great Expectations
+### Great Expectations
 
 This course doesn't seek to be the canonical curriculum on testing. Instead, all of our discussions on testing are going to be from the perspective that your primary job is to write software and if your tests are brittle or hard to maintain, you're going to stop testing.
 
@@ -40,13 +50,13 @@ If the section that follows was a Buzzfeed blog post, it's title would be "Top T
 - [Asymmetric Matchers](content/Asymmetric%20Matchers.md) and a [Real World Use Case for Asymmetric Matching](content/Real%20World%20Use%20Case%20for%20Asymmetric%20Matching.md)
 - **Exercise**: [Testing a Reducer Exercise](content/Testing%20a%20Reducer%20Exercise.md) and a [Solution](content/Testing%20a%20Reducer%20Solution.md)
 
-## Parallelizing, Parameterizing, and Reporting
+### Parallelizing, Parameterizing, and Reporting
 
 - [Test Context](content/Test%20Context.md)
 - [Parameterizing Tests](content/Parameterizing%20Tests.md)
 - [Parallelizing Tests](content/Parallelizing%20Tests.md)
 
-# Building a CI Pipeline with Github Actions
+## Building a CI Pipeline with Github Actions
 
 We know that if a test doesn't fail then it technically passes. What about if you never run your tests? Join me for this and other deep philosophical questions. In this section, we'll begin building out some of our automated testing pipeline (a.k.a. continuous integration) using [Github Actions](https://www.google.com/search?client=safari&rls=en&q=github+actions&ie=UTF-8&oe=UTF-8).
 
@@ -58,7 +68,7 @@ We know that if a test doesn't fail then it technically passes. What about if yo
 - Exercise: [Setting Up Prettier with Github Actions](content/Setting%20Up%20Prettier%20with%20Github%20Actions.md) and a [Solution](content/Setting%20Up%20Prettier%20Solution.md)
 - Bonus: [Running Github Actions Locally](content/Running%20Github%20Actions%20Locally.md)
 
-# Component Testing
+## Component Testing
 
 Testing functions is all well and good, but what about mounting entire components? This can be a great way to get some confidence in your UI implementation without needing to figure out how to get a full browser-driven integration suite up and running. In this section, we'll get starting with [Testing Library](https://testing-library.com), which is a _mostly_ framework-agnostic tool for rendering UI to a fake DOM and giving you the ability to interact with it just like a real user would.
 
@@ -73,20 +83,20 @@ Testing functions is all well and good, but what about mounting entire component
 - Bonus Exercise: [Obstacle Course](content/Obstacle%20Course.md)
 - [Working with Contexts and Redux](content/Working%20with%20Contexts%20and%20Redux.md) and [Exercise](content/Working%20with%20Contexts%20and%20Redux.md#Exercise)
 
-## Testing for Accessibility
+### Testing for Accessibility
 
 - [Hooking Up aXe with Testing Library](content/Hooking%20Up%20aXe%20with%20Testing%20Library.md)
 
-## Testing for Code Coverage
+### Testing for Code Coverage
 
 - [Code Coverage](content/Code%20Coverage.md)
 
-# Storing Artifacts Using Github Actions
+## Storing Artifacts Using Github Actions
 
 - [Generating Artifacts Using Github Actions](content/Generating%20Artifacts%20Using%20Github%20Actions.md)
 - Exercise: [Generating an Artifact for Your Code Coverage Report](content/Generating%20Artifacts%20Using%20Github%20Actions.md#Exercise) and a [Solution](content/Generating%20an%20Artifact%20for%20Your%20Code%20Coverage%20Report.md)
 
-# Mocking and Spying
+## Mocking and Spying
 
 - [Mocks](content/Mocks.md)
 - [Spies](content/Spies.md)
@@ -98,7 +108,7 @@ Testing functions is all well and good, but what about mounting entire component
 - [Mocking Environment Variables](content/Mocking%20Environment%20Variables.md)
 - [Mocking APIs](content/Mocking%20APIs.md)
 
-# Integration Testing with Playwright
+## Integration Testing with Playwright
 
 - [Getting Set Up with Playwright](content/Getting%20Set%20Up%20with%20Playwright.md)
 - [Writing Some Simple Playwright Tests](content/Writing%20Some%20Simple%20Playwright%20Tests.md)
@@ -110,7 +120,7 @@ Testing functions is all well and good, but what about mounting entire component
 - [Mocking Routes in Playwright](https://playwright.dev/docs/mock)
 - [Recording Network Requests with Playwright](content/Recording%20Network%20Requests%20with%20Playwright.md)
 
-# Enforcing Standards
+## Enforcing Standards
 
 - [Configuring Prettier](content/Prettier.md)
 - [Configuring and Running ESLint](content/Configuring%20and%20Running%20ESLint.md)
