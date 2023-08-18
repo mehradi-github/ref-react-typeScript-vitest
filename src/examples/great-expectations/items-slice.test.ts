@@ -29,7 +29,7 @@ it.todo('defaults new items to a packed status of false', () => {
   const result = reducer([], add({ name: 'iPhone' }));
 });
 
-it.todo('supports removing an item', () => {
+it('supports removing an item', () => {
   expect.hasAssertions();
   const state = [
     {
@@ -40,6 +40,7 @@ it.todo('supports removing an item', () => {
   ];
 
   const result = reducer(state, remove({ id: '1' }));
+  expect(result).not.toContain(expect.objectContaining({ id: '1' }));
 });
 
 it.todo('supports toggling an item', () => {
