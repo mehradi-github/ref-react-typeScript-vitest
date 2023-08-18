@@ -16,9 +16,12 @@ it('supports adding an item with the correct name', () => {
   expect(result).toEqual([expect.objectContaining({ name: 'iPhone' })]);
 });
 
-it.todo('prefixes ids with "item-"', () => {
+it('prefixes ids with "item-"', () => {
   expect.hasAssertions();
   const result = reducer([], add({ name: 'iPhone' }));
+  expect(result).toEqual([
+    expect.objectContaining({ id: expect.stringMatching(/^item-/) }),
+  ]);
 });
 
 it.todo('defaults new items to a packed status of false', () => {
