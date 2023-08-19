@@ -5,6 +5,7 @@ import Counter from '.';
 
 test('it should render the component', () => {
   render(<Counter />);
+  screen.debug(document.body);
 });
 
 test.todo(
