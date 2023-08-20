@@ -11,6 +11,7 @@ export default defineConfig({
   },
   test: {
     globals: true,
+    setupFiles: './test/utilities.ts',
     exclude: [...defaultExclude, '**/*.svelte**'],
   },
 });
