@@ -1,6 +1,6 @@
-import { screen, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Counter from '.';
+import { user, render, screen } from './test/utilities';
 
 test('it should render the component', () => {
   render(<Counter />);
@@ -27,7 +27,12 @@ test('it should render the component with an initial count', () => {
   expect(currentCount.textContent).toBe('4000');
 });
 
-test.todo(
-  'it should reset the count when the "Reset" button is pressed',
-  async () => {},
-);
+test.only('it should reset the count when the "Reset" button is pressed', async () => {
+  const { user } = render(<Counter initialCount={65} />);
+  const currentCount = screen.getByTestId('current-count');
+  expect(currentCount.textContent).toBe('65');
+
+  const resetButton = screen.getByRole('button', { name: /reset/i });
+  await user.click(resetButton);
+  expect(currentCount.textContent).toBe('0');
+});
