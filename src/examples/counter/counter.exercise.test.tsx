@@ -5,7 +5,7 @@ import Counter from '.';
 test('it should render the component', () => {
   render(<Counter />);
   const currentCount = screen.getByTestId('current-count');
-  expect(currentCount).toHaveTextContent('0');
+  expect(currentCount.textContent).toBe('0');
 });
 
 test('it should increment when the "Increment" button is pressed', async () => {
@@ -17,10 +17,15 @@ test('it should increment when the "Increment" button is pressed', async () => {
 
   await user.click(incrementButton);
 
-  expect(currentCount).toHaveTextContent('1');
+  expect(currentCount.textContent).toBe('1');
 });
 
-test.todo('it should render the component with an initial count', () => {});
+test('it should render the component with an initial count', () => {
+  render(<Counter initialCount={4000} />);
+
+  const currentCount = screen.getByTestId('current-count');
+  expect(currentCount.textContent).toBe('4000');
+});
 
 test.todo(
   'it should reset the count when the "Reset" button is pressed',
