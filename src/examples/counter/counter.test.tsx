@@ -8,11 +8,11 @@ test('it should render the component', () => {
   render(<Counter />);
 });
 
-test('it should increment when the "Increment" button is pressed', async () => {
+test.only('it should increment when the "Increment" button is pressed', async () => {
   const { user } = render(<Counter />);
   const currentCount = screen.getByTestId('current-count');
   expect(currentCount.textContent).toBe('0');
   const botton = screen.getByRole('button', { name: 'Increment' });
   await user.click(botton);
-  expect(currentCount.textContent).toBe('1');
+  expect(currentCount).toHaveTextContent('1');
 });

@@ -1,6 +1,6 @@
 import userEvent from '@testing-library/user-event';
 import Counter from '.';
-import { user, render, screen } from './test/utilities';
+import { render, screen } from './test/utilities';
 
 test('it should render the component', () => {
   render(<Counter />);
