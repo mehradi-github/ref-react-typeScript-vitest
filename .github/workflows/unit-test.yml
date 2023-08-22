@@ -37,7 +37,7 @@ jobs:
         name: Checkout Repository
       - name: Setup Node
         uses: actions/setup-node@v3
-      - run: npm test -- --coverage
+      - run: npm coverage
       - uses: actions/upload-artifact@v3
         name: Archive coverage report
         with:
