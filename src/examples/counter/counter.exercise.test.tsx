@@ -27,7 +27,7 @@ test('it should render the component with an initial count', () => {
   expect(currentCount.textContent).toBe('4000');
 });
 
-test.only('it should reset the count when the "Reset" button is pressed', async () => {
+test('it should reset the count when the "Reset" button is pressed', async () => {
   const { user } = render(<Counter initialCount={65} />);
   const currentCount = screen.getByTestId('current-count');
   expect(currentCount.textContent).toBe('65');
