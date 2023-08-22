@@ -59,7 +59,7 @@ it.only('Remove an item', async () => {
 
   const removeButton = screen.getByLabelText(/Remove/i);
   await user.click(removeButton);
-  waitFor(() => expect(removeButton).not.toBeInTheDocument());
+  await waitFor(() => expect(removeButton).not.toBeInTheDocument());
 });
 
 it.todo(
