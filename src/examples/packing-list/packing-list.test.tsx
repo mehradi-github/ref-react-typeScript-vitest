@@ -52,14 +52,23 @@ it('adds a new item to the unpacked item list when the clicking "Add New Item"',
 });
 it('Remove an item', async () => {
   const { user } = render(<PackingList />);
-  const newItemInput = screen.getByLabelText('New Item Name');
-  const addNewItemButton = screen.getByRole('button', { name: 'Add New Item' });
-  await user.type(newItemInput, 'MacBook');
+
+  const newItemInput = screen.getByLabelText<HTMLInputElement>('New Item Name');
+  const addNewItemButton = screen.getByRole<HTMLButtonElement>('button', {
+    name: 'Add New Item',
+  });
+
+  await user.type(newItemInput, 'iPad Pro');
   await user.click(addNewItemButton);
 
-  const removeButton = screen.getByLabelText(/Remove/i);
+  const item = screen.getByLabelText('iPad Pro');
+  const removeButton = screen.getByRole('button', {
+    name: 'Remove iPad Pro',
+  });
+
   await user.click(removeButton);
-  await waitFor(() => expect(removeButton).not.toBeInTheDocument());
+
+  expect(item).not.toBeInTheDocument();
 });
 
 it.todo(
