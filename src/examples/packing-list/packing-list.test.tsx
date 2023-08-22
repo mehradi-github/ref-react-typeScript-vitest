@@ -50,7 +50,7 @@ it('adds a new item to the unpacked item list when the clicking "Add New Item"',
 
   expect(screen.getByLabelText('MacBook Pro')).not.toBeChecked();
 });
-it.only('Remove an item', async () => {
+it('Remove an item', async () => {
   const { user } = render(<PackingList />);
   const newItemInput = screen.getByLabelText('New Item Name');
   const addNewItemButton = screen.getByRole('button', { name: 'Add New Item' });
