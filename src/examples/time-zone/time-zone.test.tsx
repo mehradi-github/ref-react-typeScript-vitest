@@ -1,4 +1,4 @@
-import { test, expect, vi, beforeEach } from 'vitest';
+import { test, expect, vi, beforeEach, afterEach } from 'vitest';
 import { render } from 'test/utilities';
 import TimeZone from '.';
 
@@ -14,4 +14,8 @@ test('it should render successfully', () => {
 test('should match the snapshot', async () => {
   const { container } = render(<TimeZone />);
   expect(container).toMatchSnapshot();
+});
+
+afterEach(() => {
+  vi.useRealTimers();
 });

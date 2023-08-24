@@ -1,8 +1,8 @@
-# React + TypeScript + Vitest
+# React + Vitest + Playwright
 
-Testing & Code Quality with Vitest and Github-actions
+Testing & Code Quality with React, TypeScript, Vitest, Playwright and Github-actions
 
-- [React + TypeScript + Vitest](#react--typescript--vitest)
+- [React + Vitest + Playwright](#react--vitest--playwright)
   - [Introduction](#introduction)
   - [Unit Testing](#unit-testing)
     - [Testing Philosophy](#testing-philosophy)
