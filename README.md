@@ -1,6 +1,8 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vitest
 
-- [React + TypeScript + Vite](#react--typescript--vite)
+Testing & Code Quality with Vitest and Github-actions
+
+- [React + TypeScript + Vitest](#react--typescript--vitest)
   - [Introduction](#introduction)
   - [Unit Testing](#unit-testing)
     - [Testing Philosophy](#testing-philosophy)
