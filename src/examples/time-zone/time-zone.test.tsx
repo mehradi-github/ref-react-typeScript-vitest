@@ -1,12 +1,17 @@
-import { test, expect, vi } from 'vitest';
+import { test, expect, vi, beforeEach } from 'vitest';
 import { render } from 'test/utilities';
 import TimeZone from '.';
 
+beforeEach(() => {
+  vi.useFakeTimers();
+  vi.setSystemTime(1692861053685);
+});
+//1692861053685- 1692862710706 - 1692862751992
 test('it should render successfully', () => {
   render(<TimeZone />);
 });
 
-test.fails('should match the snapshot', async () => {
+test('should match the snapshot', async () => {
   const { container } = render(<TimeZone />);
   expect(container).toMatchSnapshot();
 });
